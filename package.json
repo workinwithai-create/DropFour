@@ -1,0 +1,9 @@
+{
+  "name": "dropfour",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Four-bar live drop desk for bedroom producers and AI-music finishers. Audio I/O and MIDI.",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DropFour — live drop desk</title>
+  <meta name="description" content="Four live-instrument bars where the lift lands. Select audio I/O and a MIDI controller. Then the floor hits." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>DropFour</h1>
+  <p class="lead">Drop desk. Generators ride the lift forever and never land. Session players write four live bars where the kick returns, the filter opens, and the bass takes the floor. Pick your input, output, and MIDI controller first — then hit the drop.</p>
+  <p class="status" id="status">Seating chairs…</p>
+
+  <p class="eyebrow">Audio &amp; MIDI</p>
+  <div class="io">
+    <label>Input
+      <select id="audioIn"><option value="">Default input</option></select>
+    </label>
+    <label>Output
+      <select id="audioOut"><option value="">Default output</option></select>
+    </label>
+    <label>MIDI controller
+      <select id="midiDev"><option value="">No MIDI yet</option></select>
+    </label>
+    <button type="button" class="chip" id="refreshIo">Refresh devices</button>
+  </div>
+  <p class="hint" id="midiHint">MIDI: pad 36–39 = kick / snare / hat / crash · CC1 = drop filter · note 60 = fire drop</p>
+
+  <p class="eyebrow">Groove</p>
+  <div class="row" id="grooves"></div>
+  <p class="eyebrow">Drop</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · lift body 1–8 · drop 9–12</p>
+  <div class="bars" id="bars"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+</main>
+<div class="dock">
+  <button id="playA">A · Loop lift</button>
+  <button id="playB">B · Lift + drop</button>
+  <button id="play8">8 · Drop only</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="copy">Copy punch</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
